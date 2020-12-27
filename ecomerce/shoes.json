@@ -1,0 +1,55 @@
+[{
+        "src": "./img/tenis/shoes1.png",
+        "nombre": "Anaheim Factory Old Skool 36",
+        "precio": "280.000",
+        "id": "1"
+    },
+    {
+        "src": "./img/tenis/shoes2.png",
+        "nombre": "UltraRange EXO Hi MTE",
+        "precio": "350.000",
+        "id": "2"
+    },
+    {
+        "src": "./img/tenis/shoes3.png",
+        "nombre": "Checkerboard Classic Slip-On",
+        "precio": "200.000",
+        "id": "3"
+    },
+    {
+        "src": "./img/tenis/shoes4.png",
+        "nombre": "Old School",
+        "precio": "250.000",
+        "id": "4"
+    },
+    {
+        "src": "./img/tenis/shoes5.png",
+        "nombre": "Glen Plaid Floral Old Skool",
+        "precio": "250.000",
+        "id": "5"
+    },
+    {
+        "src": "./img/tenis/shoes6.png",
+        "nombre": "Classic Slip-On",
+        "precio": "190.000",
+        "id": "6"
+    },
+    {
+        "src": "./img/tenis/shoes7.png",
+        "nombre": "Pop UltraRange EXO",
+        "precio": "320.000",
+        "id": "7"
+    },
+    {
+        "src": "./img/tenis/shoes8.png",
+        "nombre": "Anaheim Factory Sk8-Hi 38 DX",
+        "precio": "400.000",
+        "id": "8"
+    },
+    {
+        "src": "./img/tenis/shoes9.png",
+        "nombre": "Checkerboard Classic Slip-On",
+        "precio": "190.000",
+        "id": "9"
+    }
+]
