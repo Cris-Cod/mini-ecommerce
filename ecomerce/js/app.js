@@ -1,8 +1,15 @@
 let divShoes = document.querySelector('#tarjeta');
+const carrito = document.querySelector('#carrito');
+const contenedorCarrito = document.querySelector('#lista-carrito tbody');
+const vaciarCarrito = document.querySelector('#vaciar-carrito');
+const listaCuaros = document.querySelector('#resultado-shoes');
+let articulosCarrito = [];
 
 
 addEventListener('DOMContentLoaded', banner);
 addEventListener('DOMContentLoaded', shoes);
+
+
 
 
 function banner() {
@@ -77,11 +84,113 @@ async function shoes() {
                 <div><h4>${data.nombre}</h4></div>
                 <div><p>$ ${data.precio}</p></div>
                 <div class="boton-shoes">
-                    <input type="submit" value="Comprar"  data-id=${data.id}>
+                    <a href="#" class="agregar-carrito" data-id=${data.id}>Comprar</a>
                 </div>
             </div>
         `
     })
 
+
+}
+
+
+cargarEventListeners();
+
+function cargarEventListeners() {
+    listaCuaros.addEventListener('click', agrearItem);
+
+    carrito.addEventListener('click', eliminarItem);
+
+    vaciarCarrito.addEventListener('click', () => {
+
+        articulosCarrito = [];
+
+        limpiarHtml();
+    })
+}
+
+
+function agrearItem(e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains('agregar-carrito')) {
+        const itemSeleccionado = e.target.parentElement.parentElement;
+        leerDatosItem(itemSeleccionado);
+
+    }
+}
+
+function leerDatosItem(item) {
+    // console.log(item);
+
+    const infoItem = {
+        imagen: item.querySelector('img').src,
+        nombre: item.querySelector('h4').textContent,
+        precio: item.querySelector('p').textContent,
+        id: item.querySelector('a').getAttribute('data-id'),
+        cantidad: 1
+    }
+
+    const existe = articulosCarrito.some(item => item.id === infoItem.id);
+    if (existe) {
+        const items = articulosCarrito.map(item => {
+            if (item.id === infoItem.id) {
+                item.cantidad++;
+                return item;
+            } else {
+                return item;
+            }
+        });
+        articulosCarrito = [...items];
+    } else {
+        articulosCarrito = [...articulosCarrito, infoItem];
+    }
+
+
+    carritoHTML();
+
+}
+
+function carritoHTML() {
+
+    limpiarHtml();
+
+    articulosCarrito.forEach(item => {
+        const { imagen, nombre, precio, id, cantidad } = item;
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+            <td>
+                <img src="${imagen}" width="100%">
+            </td>
+            <td>${nombre}</td>
+            <td>${precio}</td>
+            <td>${cantidad}</td>
+            <td>
+                <a href="#" class="borrar-curso" data-id=${id}>X</a>
+            </td>
+        `
+
+        contenedorCarrito.appendChild(row);
+    })
+}
+
+function limpiarHtml() {
+    while (contenedorCarrito.firstChild) {
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    }
+}
+
+
+function eliminarItem(e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains('borrar-curso')) {
+        const itemId = e.target.getAttribute('data-id');
+
+        articulosCarrito = articulosCarrito.filter(item => item.id !== itemId);
+
+        carritoHTML();
+    }
 
 }

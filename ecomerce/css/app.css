@@ -290,29 +290,31 @@ td {
 }
 
 .boton-shoes {
-    width: 210px;
-    height: 35px;
     margin: 10px auto;
+    width: 180px;
+    height: 25px;
 }
 
-.boton-shoes input[type="submit"] {
+.boton-shoes a {
+    display: block;
     width: 100%;
     height: 100%;
     padding: 5px;
     background-color: #C2000B;
-    border: none;
-    outline: none;
-    cursor: pointer;
     font-size: 16px;
     color: #fff;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
     transition: all 300ms ease;
 }
 
-.boton-shoes input[type="submit"]:hover {
+.boton-shoes a:hover {
     background-color: rgb(156, 20, 20);
 }
 
-.boton-shoes input[type="submit"]:active {
+.boton-shoes a:active {
+    display: block;
     width: 99%;
     height: 99%;
 }
