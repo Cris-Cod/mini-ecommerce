@@ -157,6 +157,18 @@ td {
     background-color: #bbb;
 }
 
+.borrar-curso {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    line-height: 22px;
+}
+
 .banner {
     width: 100%;
     display: flex;
@@ -317,4 +329,25 @@ td {
     display: block;
     width: 99%;
     height: 99%;
+}
+
+.banner-medio {
+    position: absolute;
+    top: 1950px;
+    width: 100%;
+    height: 350px;
+    margin-left: -99.9%;
+    opacity: 0;
+    transition: margin-left opacity 700ms ease;
+}
+
+.banner-medio img {
+    width: 100%;
+    height: 100%;
+    background: cover;
+}
+
+.active {
+    margin-left: 0;
+    opacity: 100;
 }
