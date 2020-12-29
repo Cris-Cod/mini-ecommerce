@@ -1,0 +1,17 @@
+[{
+        "src": "./img/ropa/ropa1.png",
+        "nombre": "Retro Fades T-Shirt"
+    },
+    {
+        "src": "./img/ropa/ropa2.png",
+        "nombre": "OG Checker Long Sleeve T-Shirt"
+    },
+    {
+        "src": "./img/ropa/ropa3.png",
+        "nombre": "New Varsity Long Sleeve T-Shirt"
+    },
+    {
+        "src": "./img/ropa/ropa4.png",
+        "nombre": "VANS X MOMA"
+    }
+]

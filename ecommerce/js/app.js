@@ -8,6 +8,7 @@ let articulosCarrito = [];
 
 addEventListener('DOMContentLoaded', banner);
 addEventListener('DOMContentLoaded', shoes);
+addEventListener('DOMContentLoaded', proximos);
 
 
 
@@ -218,9 +219,43 @@ window.addEventListener('scroll', () => {
     //console.log(ubicacion);
 
     if (ubicacion.top < 500) {
-        console.log('listo')
+        //console.log('listo')
         bannerS.classList.add('active');
     } else {
         bannerS.classList.remove('active');
+    }
+})
+
+
+async function proximos() {
+
+    const res = await fetch('./proximosProductos.json');
+    const infos = await res.json();
+
+    const productos = document.querySelector('#proximos-p')
+
+    infos.forEach(info => {
+
+        const { src, nombre } = info;
+
+        productos.innerHTML += `
+            <div class="tarjeta">
+                <div class="tarjeta-image"><img src="${src}"></div>
+                <div><h4>${nombre}</h4></div>
+            </div>
+        `
+    })
+}
+
+
+window.addEventListener('scroll', () => {
+
+    const proximos = document.querySelector('#proximos-productos');
+    const lugar = proximos.getBoundingClientRect();
+
+    if (lugar.top < 400) {
+        proximos.classList.add('proximos-active');
+    } else {
+        proximos.classList.remove('proximos-active');
     }
 })
