@@ -115,6 +115,7 @@
             
             th,
             td {
+                width: 100%;
                 padding: 12px 18px;
                 text-align: left;
                 border-bottom: 2px solid #E1E1E1;
@@ -256,7 +257,7 @@
             }
             
             .tenis-cards {
-                width: 69%;
+                width: 80%;
                 height: auto;
                 display: flex;
                 flex-direction: row;
@@ -268,7 +269,7 @@
                 width: 270px;
                 height: 420px;
                 background-color: #E1E1E1;
-                margin: 10px 20px;
+                margin: 10px auto;
                 box-shadow: 6px 9px 5px -5px rgba(0, 0, 0, 0.57);
                 -webkit-box-shadow: 6px 9px 5px -5px rgba(0, 0, 0, 0.57);
                 -moz-box-shadow: 6px 9px 5px -5px rgba(0, 0, 0, 0.57);
@@ -381,7 +382,7 @@
                 width: 270px;
                 height: 350px;
                 background-color: #E1E1E1;
-                margin: 14px 8px;
+                margin: 14px auto;
                 box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.58);
                 -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.58);
                 -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.58);
@@ -407,8 +408,8 @@
             }
             
             footer {
-                position: relative;
-                top: 2300px;
+                position: absolute;
+                top: 2800px;
                 background-color: #2F2F2F;
                 width: 100%;
                 height: 80px;
@@ -447,9 +448,153 @@
                 font-size: 24px;
             }
             
+            @media(max-width:1270px) {
+                footer {
+                    position: absolute;
+                    top: 3170px;
+                }
+            }
+            
             @media(max-width:1000px) {
+                .proximos {
+                    position: absolute;
+                    top: 3130px;
+                }
                 .banner-medio {
                     position: absolute;
                     top: 2800px;
+                }
+                .p-productos {
+                    width: 90%;
+                    height: auto;
+                }
+                footer {
+                    position: absolute;
+                    top: 3950px;
+                }
+            }
+            
+            @media(max-width:674px) {
+                header {
+                    width: 100%;
+                    height: 130px;
+                    background-color: #2F2F2F;
+                }
+                .cabezera {
+                    margin: 12px auto;
+                    width: 70%;
+                    height: 100px;
+                    justify-content: space-around;
+                }
+                .submenu:hover #carrito {
+                    right: -30px;
+                }
+                .shoes {
+                    position: absolute;
+                    top: 520px;
+                }
+                .banner-medio {
+                    position: absolute;
+                    top: 4550px;
+                }
+                .proximos {
+                    position: absolute;
+                    top: 4850px;
+                }
+                footer {
+                    position: absolute;
+                    top: 5660px;
+                }
+            }
+            
+            @media(max-width:598px) {
+                .submenu:hover #carrito {
+                    right: -120px;
+                    min-height: 300px;
+                    min-width: 350px;
+                }
+                footer {
+                    position: absolute;
+                    top: 6450px;
+                    justify-content: space-evenly;
+                    width: 100%;
+                }
+            }
+            
+            @media(max-width:500px) {
+                header {
+                    width: 100%;
+                    height: 150px;
+                    background-color: #2F2F2F;
+                }
+                .cabezera {
+                    margin: 15px auto;
+                    width: 80%;
+                    height: 100px;
+                    justify-content: space-around;
+                }
+                .submenu:hover #carrito {
+                    right: -120px;
+                    min-height: 300px;
+                    min-width: 350px;
+                }
+                .shoes {
+                    position: absolute;
+                    top: 580px;
+                }
+                footer {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                }
+                footer p {
+                    text-align: center;
+                }
+                .redes {
+                    width: 100%;
+                    margin: 5px auto;
+                }
+            }
+            
+            @media(max-width:481px) {
+                header {
+                    width: 100%;
+                    height: 190px;
+                    background-color: #2F2F2F;
+                }
+                .cabezera {
+                    margin: 10px auto;
+                    width: 100%;
+                    height: 180px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .logo,
+                .formulario,
+                .login,
+                .carro {
+                    margin: 5px auto;
+                }
+                .submenu:hover #carrito {
+                    right: -165px;
+                    min-height: 300px;
+                    width: 330px;
+                }
+                th,
+                td {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 2px 1px;
+                    text-align: center;
+                    border-bottom: 2px solid #E1E1E1;
+                }
+                td img {
+                    margin: 0 auto;
+                    width: 40%;
+                }
+                .borrar-curso {
+                    margin: 0 auto;
                 }
             }

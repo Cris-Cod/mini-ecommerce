@@ -112,6 +112,7 @@ function cargarEventListeners() {
 
         articulosCarrito = [];
 
+        carritoHTML();
         limpiarHtml();
     })
 }
@@ -167,15 +168,17 @@ function carritoHTML() {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-            <td>
-                <img src="${imagen}" width="100%">
-            </td>
-            <td>${nombre}</td>
-            <td>${precio}</td>
-            <td>${cantidad}</td>
-            <td>
-                <a href="#" class="borrar-curso" data-id=${id}>X</a>
-            </td>
+            
+                <td>
+                    <img src="${imagen}" width="100%">
+                </td>
+                <td>${nombre}</td>
+                <td>${precio}</td>
+                <td>${cantidad}</td>
+                <td>
+                    <a href="#" class="borrar-curso" data-id=${id}>X</a>
+                </td>
+            
         `
 
         contenedorCarrito.appendChild(row);
